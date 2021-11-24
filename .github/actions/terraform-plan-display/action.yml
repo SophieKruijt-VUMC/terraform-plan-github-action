@@ -1,0 +1,21 @@
+name: 'Display Terraform plan'
+description: 'Display a Terraform plan'
+inputs:
+  message:
+    description: 'the terraform plan to output'
+    required: true
+  environment:
+    description: 'environment'
+    required: true
+  token:
+    description: 'Github token'
+    default: ${{ github.token }}
+    required: true
+
+outputs:
+  check-run-url:
+    description: 'URL of the check run.'
+
+runs:
+  using: 'node12'
+  main: 'lib/main.js'

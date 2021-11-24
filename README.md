@@ -1,21 +1,31 @@
-# Hello world javascript action
+# Display Terraform plan action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action creates check-runs with a Terraform plan
 
 ## Inputs
 
-## `who-to-greet`
+## `message`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The Terraform plan to output.
 
-## Outputs
+## `environment`
 
-## `time`
+**Required** The environment of the Terraform plan.
 
-The time we greeted you.
+## `token`
+
+GitHub token
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1
-with:
-  who-to-greet: 'Mona the Octocat'
+```yaml
+name: Display Terraform plan in GitHub
+  uses: ./.github/actions/terraform-plan-display
+  with:
+    environment: 'dev'
+    message: 'this is a test'
+    token: ${{ secrets.GITHUB_TOKEN }}
+```
+
+## Development
+To build: `npm run build`
