@@ -1,5 +1,4 @@
 import * as core from '@actions/core';
-import * as fs from 'fs';
 import * as inputHelper from './inputHelper';
 import * as gitHubHelper from './gitHubHelper';
 import { GitHubClient } from './githubClient';
