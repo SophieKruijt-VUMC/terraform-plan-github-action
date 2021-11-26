@@ -28,4 +28,9 @@ name: Display Terraform plan in GitHub
 ```
 
 ## Development
+
 To build: `npm run build`
+
+## Improvements to make
+
+- Use webpack or something similiar to bundle all files and node_modules. Checkin in node_modules === bad
