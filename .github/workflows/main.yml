@@ -11,7 +11,7 @@ jobs:
           ref: main
 
       - name: Display Terraform plan in GitHub
-        uses: .
+        uses: ./
         with:
           environment: 'dev'
           message: 'This is a test. The Terraform plan should go here!'
