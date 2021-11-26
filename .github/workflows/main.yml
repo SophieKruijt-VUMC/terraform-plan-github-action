@@ -1,4 +1,4 @@
-name: message
+name: Terraform plan example
 on: [push]
 
 jobs:
