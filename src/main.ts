@@ -15,9 +15,9 @@ export async function run(): Promise<void> {
             status: "completed",
             conclusion: "neutral",
             output: {
-              title: "Container scan result",
-              summary: `Here comes the Terraform plan!`,
-              text: "abcef"
+              title: `Terraform Plan ${inputHelper.environment}`,
+              summary: `Terraform Plan for environment ${inputHelper.environment}`,
+              text: `${inputHelper.message}`
             }
           }
 
