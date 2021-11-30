@@ -9,6 +9,9 @@ export async function run(): Promise<void> {
     try {
         const gitHubClient = new GitHubClient(process.env.GITHUB_REPOSITORY, inputHelper.token);
 
+        const message = `${inputHelper.message}`
+        console.log(message)
+
         const payload = {
             head_sha: gitHubHelper.getHeadSha(),
             name: `[Terraform Plan Result] ${inputHelper.environment}`,
@@ -17,7 +20,7 @@ export async function run(): Promise<void> {
             output: {
               title: `Terraform Plan ${inputHelper.environment}`,
               summary: `Terraform Plan for environment ${inputHelper.environment}`,
-              text: `${inputHelper.message}`
+              text: message
             }
           }
 
