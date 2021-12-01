@@ -18,7 +18,7 @@ export class GitHubClient {
             Accept: 'application/vnd.github.antiope-preview+json'
         };
 
-        console.log(`Creating check run. Name: ${payload['name']}, head_sha: ${payload['head_sha']}`);
+        console.log(`Creating GitHub check run. Name: ${payload['name']}, head_sha: ${payload['head_sha']}`);
         const response: WebResponse = await sendRequest(webRequest);
         if (response.statusCode != StatusCodes.CREATED) {
             throw Error(`Statuscode: ${response.statusCode}, StatusMessage: ${response.statusMessage}, Url: ${checkRunUrl}, head_sha: ${payload['head_sha']}`);

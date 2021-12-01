@@ -9,7 +9,9 @@ export async function run(): Promise<void> {
     try {
         const gitHubClient = new GitHubClient(process.env.GITHUB_REPOSITORY, inputHelper.token);
 
-        const message = `${inputHelper.message}`
+        console.log(`hello world`);
+        console.log(inputHelper.message)
+        const message = inputHelper.message
         console.log(message)
 
         const payload = {
