@@ -18,7 +18,7 @@ export async function run(): Promise<void> {
             head_sha: gitHubHelper.getHeadSha(),
             name: `[Terraform Plan Result] ${inputHelper.environment}`,
             status: "completed",
-            conclusion: "neutral",
+            conclusion: "success",
             output: {
               title: `Terraform Plan ${inputHelper.environment}`,
               summary: `Terraform Plan for environment ${inputHelper.environment}`,
